@@ -1,0 +1,69 @@
+﻿@model Appointment.ViewModel.Models.EmployeeRemindersViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="container">
+    <h2 id="tital">Details</h2>
+    <div class="row mb-3">
+        <div class="col-md-4">
+            @Html.DisplayNameFor(model => model.Name):
+            @Html.DisplayFor(model => model.Name)
+        </div>
+
+        <div class="col-md-4">
+            @Html.DisplayNameFor(model => model.Email):
+            @Html.DisplayFor(model => model.Email)
+        </div>
+
+        <div class="col-md-4">
+            @Html.DisplayNameFor(model => model.BirthDate):
+            @Html.DisplayFor(model => model.BirthDate)
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md-4">
+            @Html.DisplayNameFor(model => model.StartDate):
+            @Html.DisplayFor(model => model.StartDate)
+        </div>
+
+        <div class="col-md-4">
+            @Html.DisplayNameFor(m => m.Position):
+            @Html.DisplayFor(m => m.Position)
+        </div>
+
+        <div class="col-md-4">
+            @Html.DisplayName("Type"):
+            @Html.Label("Employee Reminder")
+        </div>
+    </div>
+    <div class="row mb-3">
+        @*<div class="col-md-4">
+            @Html.DisplayName("Image"):
+
+            @if (Model.ImagePath != null)
+            {
+                <img src="@Url.Content(Model.ImagePath)" height="100px" width="100px" />
+            }
+        </div>*@
+
+        <div class="col-md-4">
+            @Html.DisplayNameFor(model => model.IsActive)
+            @Html.DisplayFor(model => model.IsActive)
+        </div>
+
+        <div class="col-md-4">
+
+        </div>
+    </div>
+
+</div>
+<div class="text-center m-5">
+    <div class="">
+        <input type="button" value="Back" class="btn btn-primary" onclick="location.href='@Url.Action("Index", "Calendar")'" />
+    </div>
+</div>
+
+
+

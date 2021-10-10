@@ -1,0 +1,9 @@
+﻿.validation-label {
+    color: red;
+    font-size: 10px !important;
+    font-weight: 300 !important;
+    display: block;
+    text-align: left;
+    top: auto;
+    margin-top: 0px;
+}

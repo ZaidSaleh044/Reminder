@@ -1,0 +1,132 @@
+﻿@using System.Web.Configuration;
+
+<div id="wait_overlay" style="opacity: 0.5; height: 100%; width: 100%; position: fixed; left: 0px; top: 0px; z-index: 2020; background:rgba(156, 206, 136, 0.15);">
+    <img src="~/Assets/images/spinner-transparent.gif" style="display: block; margin-left: auto; margin-right: auto; width:111px; padding-top:100px;">
+</div>
+
+<script>
+    $(document).ready(function () {
+        setTimeout(function () {
+            $('#wait_overlay').hide();
+        }, 200)
+    })
+</script>
+
+<script>
+    var _SessionRefreshTime = '@WebConfigurationManager.AppSettings["SessionRefreshTime"]';
+    var _SessionFullTime = '@WebConfigurationManager.AppSettings["SessionFullTime"]';
+    var _SessionRefreshTimeMinutes = 60 * _SessionRefreshTime;
+    var _SessionFullTimeMinutes = 1000 * 60 * (_SessionFullTime - _SessionRefreshTime);
+    var _RefreshSessionTimeOutUrl = '@Url.Action("RefreshSessionTimeOut", "Shared")';
+    var _RemoveSessionTimeOutUrl = '@Url.Action("RemoveSessionsTimeOut", "Shared")';
+    var _GetStartUrl = '@Url.Action("Index", "Home")';
+    var _LogoutUrl = '@Url.Action("Index", "Logout")';
+    var _CheckSession = '@Url.Action("CheckSession","ApplicationInquiry")';
+    var _SessionClosedConfirmation = '@Html.Raw("EndSessionMsg")';
+    var _SubmitConfirmTitle = '@Html.Raw("Confirmation")';
+    var _No = '@Html.Raw("No")';
+    var _Yes = '@Html.Raw("Yes")';
+    var _Ok = '@Html.Raw("OK")';
+
+
+
+    function eyeMousedownPass(obj) {
+        var obj = document.getElementById('inputPassword');
+        obj.type = "text";
+
+        document.getElementById("iEye").classList.add("d-none");
+        document.getElementById("iEye").classList.remove("d-block");
+
+        document.getElementById("iEyeSlash").classList.add("d-block");
+        document.getElementById("iEyeSlash").classList.remove("d-none");
+    }
+    function eyeMouseupPass(obj) {
+        var obj = document.getElementById('inputPassword');
+        obj.type = "password";
+
+        document.getElementById("iEyeSlash").classList.add("d-none");
+        document.getElementById("iEyeSlash").classList.remove("d-block");
+
+        document.getElementById("iEye").classList.add("d-block");
+        document.getElementById("iEye").classList.remove("d-none");
+    }
+</script>
+
+<script>
+    AOS.init();
+</script>
+
+
+<script type="text/javascript">
+    $(function () {
+        //initHijrDatePicker();
+        //initGregorianDatePicker();//ThuKH300420201009
+    });
+
+    function initHijrDatePicker() {
+
+        $("#hijri-date-input").hijriDatePicker({
+            locale: "en-SA",//ar-sa
+            hijriFormat: "iDD/iMM/iYYYY",
+            //format: "DD-MM-YYYY",
+            //hijriFormat:"iYYYY-iMM-iDD",
+            //dayViewHeaderFormat: "MMMM YYYY",
+            //hijriDayViewHeaderFormat: "iMMMM iYYYY",
+            showSwitcher: false,
+            allowInputToggle: false,
+            showTodayButton: false,
+            useCurrent: true,
+            isRTL: false,
+            keepOpen: false,
+            hijri: true,
+            debug: true,
+            showClear: false,
+            showTodayButton: false,
+            showClose: false
+        });
+    }
+
+    function initGregorianDatePicker() {
+
+        $("#gregorian-date-input").hijriDatePicker({
+            locale: "en-SA",
+            format: "MM/DD/YYYY",
+            //dayViewHeaderFormat: "MMMM YYYY",
+            //hijriDayViewHeaderFormat: "iMMMM iYYYY",
+            showSwitcher: false,
+            allowInputToggle: false,
+            showTodayButton: false,
+            useCurrent: true,
+            isRTL: false,
+            keepOpen: false,
+            hijri: false,
+            debug: true,
+            showClear: false,
+            showTodayButton: false,
+            showClose: false
+        });
+    }
+    // border for radio
+    $(document).ready(function () {
+        $("input[type=radio]").each(function () {
+            if (this.checked) {
+                $(this).parent().addClass("border-primary bg-light");
+            }
+            else {
+                $(this).parent().removeClass("border-primary bg-light");
+            }
+        });
+    });
+
+    // border for radio
+    $('input[type=radio]').on('change', function () {
+        $("input[type=radio]").each(function () {
+            if (this.checked) {
+                $(this).parent().addClass("border-primary bg-light");
+            }
+            else {
+                $(this).parent().removeClass("border-primary bg-light");
+            }
+        })
+    });
+</script>

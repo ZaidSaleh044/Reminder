@@ -1,0 +1,97 @@
+﻿@model Appointment.ViewModel.Models.EmployeesGroupsViewModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+<style>
+       #tital {
+        padding-bottom: 21px;
+        padding-top: 60px;
+    }
+</style>
+<div class="container">
+    <h2 id="tital">Delete</h2>
+    <hr />
+
+    <h3>You are not able to delete or You can't delete ..</h3>
+
+    <div>
+
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayName("Group Name")
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <br />
+            <dt>
+                @Html.DisplayName("Employees")
+            </dt>
+
+            <dd>
+                @foreach (var em in Model.Employeelist)
+            {
+
+                    <p>@Html.DisplayFor(model => em.Name)  </p>
+
+            }
+            </dd>
+            <br />
+
+        </dl>
+        <div style="clear: both;"> </div>
+
+        @using (Html.BeginForm("Delete", "groups", FormMethod.Post, new { id = "form", enctype = "multipart/form-data" }))
+
+    {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="button" value="Back" class="btn btn-default" onclick="location.href='@Url.Action("Groups", "Groups")'" />
+                <input id="btnDelete" type="button" value="Delete" class="btn btn-default" />
+
+            </div>
+    }
+    </div>
+</div>
+@section scripts{
+    <script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#btnDelete").click(function () {
+            debugger;
+            $.ajax({
+                url: '@Url.Action("DeleteCheck","Groups")/?id=' + @Model.ID ,
+                //url:'',
+                type: 'GET',
+                async: false,
+                cache: false,
+                dataType: 'json',
+                success: function (data)
+                {
+                    if (data.canDelete)
+                    {
+                        $("#form").submit();
+                    }
+                    else
+                        alert("you can not be able to delete a group with reminders !");
+
+                }
+                , error: function ()
+                {
+                    alert("server error !");
+                }
+            });
+        });
+    });
+    </script>
+}
+
+    <style>
+        p {
+            display: inline;
+        }
+    </style>

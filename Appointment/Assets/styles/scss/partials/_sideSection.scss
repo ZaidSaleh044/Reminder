@@ -1,0 +1,51 @@
+// Side Section
+
+.side-section{
+    background-color: $secondaryColor;
+
+    .side-question{
+        color: $primaryColor;
+        font-size: .75rem;
+        padding-left: 0;
+        padding-right: 0;
+        display: block;
+        margin-bottom: 1rem;
+    }
+}
+
+.need-help {
+    left: -170px;
+    transition: .2s all ease-in-out;
+    width: 170px;
+
+
+    &.rounded {
+        border-radius: .25rem 0 .25rem .25rem !important;
+    }
+
+    .help-toggle {
+        right: -30px;
+        font-size: .9rem;
+        top: 0;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 0 .25rem .25rem 0;
+
+        span {
+            transition: .2s all ease-in-out;
+        }
+    }
+
+
+    &.show {
+        left: 10px;
+
+        .help-toggle svg {
+            transform: rotate(180deg);
+            transition: .2s all ease-in-out;
+        }
+    }
+}
+

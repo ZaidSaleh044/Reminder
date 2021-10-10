@@ -1,0 +1,85 @@
+﻿@model Appointment.ViewModel.Models.GeneralRemindersViewModel
+
+@{
+    ViewBag.Title = "GeneralDetails";
+}
+<div class="container">
+    <h2>Details</h2>
+
+    <div>
+        <hr />
+        <div class="row mb-3">
+            <div class="col-md-4">
+                    @Html.DisplayNameFor(model => model.Name): 
+
+                    @Html.DisplayFor(model => model.Name)
+            </div>
+
+            <div class="col-md-4">
+                    @Html.DisplayNameFor(model => model.StartDate):
+
+                    @Html.DisplayFor(model => model.StartDate)
+            </div>
+
+            <div class="col-md-4">
+                <div>
+                    @Html.DisplayName("Groups")
+                </div>
+                <div>
+                    @foreach (var group in Model.SelectedGroups)
+                    {
+                        <p>@Html.DisplayFor(model => group)  </p>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-4">
+                    @Html.DisplayName("Type"): 
+
+                    @Html.Label("General Reminder")
+            </div>
+
+            <div class="col-md-4">
+                <div>
+                    @Html.DisplayNameFor(model => model.IsActive)
+                </div>
+
+                <div>
+                    @Html.DisplayFor(model => model.IsActive)
+                </div>
+            </div>
+
+            <div class="col-md-4">
+
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-4">
+
+            </div>
+
+            <div class="col-md-4">
+
+            </div>
+
+            <div class="col-md-4">
+
+            </div>
+        </div>
+       
+    </div>
+    <p>
+        <div class="text-center m-5">
+            <div class="">
+                <input type="button" value="Back" class="btn btn-primary" onclick="window.history.back();" />
+            </div>
+        </div>
+    </p>
+</div>
+<style>
+    p {
+        display: inline;
+    }
+</style>

@@ -1,0 +1,119 @@
+﻿@model IEnumerable<Appointment.ViewModel.Models.CalendarViewModel>
+
+@{
+    ViewBag.Title = "Calendar";
+}
+
+
+<div class="container">
+    <h2>Upcoming Reminders List</h2>
+    <hr />
+    <div>
+        <div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <label>Name :</label>
+                    <input class=k-textbox type=text id="Name" placeholder="enter search text..." />
+                </div>
+                <div class="col-md-3">
+                    <label>Date :</label>
+                    @Html.TextBox("Date", "", new { @Id = "Date" })
+                </div>
+                <div class="col-md-2" id="a">
+                    <input type="submit" value="Search" class="btn btn-primary" id="refresh" />
+                </div>
+            </div>
+        </div>
+        <div id="kGrid"></div>
+    </div>
+    <div>
+        <div>
+            <div class="row">
+                <div class="col-md-12">
+
+                    @(Html.Kendo().Grid(Model)
+              .Name("CalendarGrid")
+
+              .Columns(columns =>
+              {
+                  columns.Bound(p => p.Name).Width(100);
+                  columns.Bound(p => p.TheDate).Width(200)/*.Format("{0:dd/MM/yyyy}")*/;
+                  columns.Bound(p => p.ID).Width(200).ClientTemplate("#= Details(data) #");
+
+
+              })
+              .Editable(editable => editable.Enabled(false).Mode(GridEditMode.InCell))
+              .Pageable(pageable => pageable
+                       .Refresh(true)
+                       .PageSizes(true)
+                       .ButtonCount(5))
+              .Sortable()
+              .Navigatable()
+              .Scrollable()
+              .DataSource(dataSource => dataSource
+              .Ajax()
+                  .PageSize(20)
+                  .Model(model => model.Id(p => p.ID))
+                  .Read(read => read.Action("Read", "Calendar").Data("additionalInfo"))
+
+
+              )
+                    )
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@*///////////////////////////////////////////////////////////////////////////////*@
+<style>
+    .k-grid .k-state-selected {
+        background: #1cacff;
+        color: #000000;
+    }
+
+    .k-grid tr.k-state-selected:hover {
+        background-color: #c5f1ff;
+    }
+    #a {
+        padding-bottom: 15px;
+        margin-top: -6px;
+    }
+</style>
+
+
+@*///////////////////////////////////////////////////////////*@
+<script type="text/javascript">
+
+            $(document).ready(function () {
+                $("form.k-edit-form").kendoValidator();
+                $("#Date").kendoDatePicker({
+                    format: "dd/MM/yyyy",
+                });
+
+                $('#refresh').click(function () {
+                    $('#CalendarGrid').data('kendoGrid').dataSource.read();
+                    $('#CalendarGrid').data('kendoGrid').refresh();
+                });
+            });
+            function additionalInfo() {
+                return {
+                    name: $("#Name").val(),
+                    Date: $("#Date").val()
+                }
+            }
+            function Details(Reminder) {
+                var action = '@Url.Action("ReminderDetails", "Calendar")';
+
+                var html = kendo.format("<a class='k-button k-button-icontext k-grid-Details' href='{0}/{1}'>Details</a>",
+                    action,
+                    Reminder.ID
+                );
+
+                return html;
+            }
+</script>
+@*/////////////////////////////////////*@
+

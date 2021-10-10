@@ -1,0 +1,80 @@
+﻿@model IEnumerable<Appointment.ViewModel.Models.GroupsViewModel>
+
+
+@{
+    ViewBag.Title = "Create new Group";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container">
+    <h2>Groups List</h2>
+    <br />
+    <div class="row">
+        <div class="col-md-12">
+            @(Html.Kendo().Grid(Model)
+             .Name("Kendo")
+             .Columns(columns =>
+             {
+                 columns.Bound(p => p.Name).Width(150).Filterable(ftb => ftb.Cell(cell => cell.Operator("contains").SuggestionOperator(FilterType.Contains).Delay(600000)));
+                 columns.Bound(p => p.EmployeesNumber).Width(150);
+                 columns.Bound(p => p.ID).Hidden();
+                 columns.Command(command =>
+                 {
+                     command.Custom("Details").Action("Details", "Groups").HtmlAttributes(new { id = "detailItem", title = "Details", value = "View Details" });
+                     command.Custom("Edit").Action("EditInfo", "Groups").HtmlAttributes(new { id = "editItem", title = "Edit", value = "View Details" });
+                     command.Custom("Delete").Action("Delete", "Groups").HtmlAttributes(new { id = "deleteItem", title = "Delete", value = "View Details" });
+                     // command.Destroy();
+
+                 }).Width(300);
+             })
+             .ToolBar(toolbar => toolbar.Custom().Text("New Group").Action("Create", "Groups"))
+             .Editable(editable => editable.Enabled(false).Mode(GridEditMode.InCell))
+             .Pageable(pageable => pageable
+                      .Refresh(true)
+                      .PageSizes(true)
+                      .ButtonCount(5))
+             .Sortable()
+             .Selectable()
+             .Navigatable()
+             .Scrollable()
+             //.ColumnMenu()
+             //.Filterable(filterable => filterable.Mode(GridFilterMode.Row))
+             .DataSource(dataSource => dataSource
+                 .Server()
+                 .PageSize(20)
+                 .Model(model => model.Id(p => p.ID))
+                 .Read("Groups", "Groups")
+                 .Destroy(destroy => destroy.Action("Delete", "Groups") )
+             )
+            )
+        </div>
+    </div>
+</div>
+<style>
+    .k-grid .k-state-selected {
+            background: #1cacff;
+        color: #000000;
+    }
+
+    .k-grid tr.k-state-selected:hover {
+            background-color: #c5f1ff;
+    }
+</style>
+@*///////////////////*@
+<script>
+function deletegroup(e) {
+            e.preventDefault();
+
+            debugger;
+            window.location.href = "@Url.Action("Delete", "Groups")";
+            }
+</script>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("form.k-edit-form").kendoValidator();
+    });
+</script>
+

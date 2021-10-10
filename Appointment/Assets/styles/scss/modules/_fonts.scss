@@ -1,0 +1,43 @@
+// Fonts 
+
+// English Font
+@font-face {
+    font-family: 'LibreFranklinBold';
+    src: url('../fonts/LibreFranklinBold.eot');
+    src: url('../fonts/LibreFranklinBold.eot') format('embedded-opentype'),
+         url('../fonts/LibreFranklinBold.woff2') format('woff2'),
+         url('../fonts/LibreFranklinBold.woff') format('woff'),
+         url('../fonts/LibreFranklinBold.ttf') format('truetype'),
+         url('../fonts/LibreFranklinBold.svg#LibreFranklinBold') format('svg');
+}
+
+@font-face {
+    font-family: 'LibreFranklinRegular';
+    src: url('../fonts/LibreFranklinRegular.eot');
+    src: url('../fonts/LibreFranklinRegular.eot') format('embedded-opentype'),
+         url('../fonts/LibreFranklinRegular.woff2') format('woff2'),
+         url('../fonts/LibreFranklinRegular.woff') format('woff'),
+         url('../fonts/LibreFranklinRegular.ttf') format('truetype'),
+         url('../fonts/LibreFranklinRegular.svg#LibreFranklinRegular') format('svg');
+}
+
+// Arabic Font
+@font-face {
+    font-family: 'Co Text Trial';
+    src: url('../fonts/CoTextTrial-Regular.eot');
+    src: url('../fonts/CoTextTrial-Regular.woff2') format('woff2'), url('../fonts/CoTextTrial-Regular.woff') format('woff'), url('../fonts/CoTextTrial-Regular.ttf') format('truetype'), url('../fonts/CoTextTrial-Regular.svg#CoTextTrial-Regular') format('svg'), url('../fonts/CoTextTrial-Regular.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+    
+$RegularFont:'Co Text Trial' #{"/*rtl:'Co Text Trial'*/"};
+$BoldFont:'Co Text Trial' #{"/*rtl:'Co Text Trial'*/"};
+$smallText:.85rem;
+$bigText:1rem;
+$medText:.9rem;
+$vSmallText:.7rem;
+
+@mixin font-weight-bold{
+    font-family:'Co Text Trial' #{"/*rtl:'Co Text Trial'*/"};
+}

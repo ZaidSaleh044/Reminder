@@ -1,0 +1,2 @@
+2021-09-06 13:04:00,495 [DefaultQuartzScheduler_Worker-1] DEBUG | WebLogger - send emails started at 9/6/2021 1:04:00 PM - Execute
+2021-09-06 13:04:01,566 [DefaultQuartzScheduler_Worker-1] DEBUG | WebLogger - send emails end at 9/6/2021 1:04:01 PM - Execute

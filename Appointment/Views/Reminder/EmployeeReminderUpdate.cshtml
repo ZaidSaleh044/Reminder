@@ -1,0 +1,266 @@
+﻿@model Appointment.ViewModel.Models.EmployeeRemindersViewModel
+
+@{
+    ViewBag.Title = "Employee Reminder Update";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+
+}
+
+<style>
+    #tital {
+        padding-bottom: 21px;
+        padding-top: 60px;
+    }
+</style>
+
+
+
+
+<div class="container">
+
+    <h2 id="tital">Employee Reminder Edit</h2>
+
+
+    @using (Html.BeginForm("EmployeeReminderUpdate", "Reminder", FormMethod.Post, new { enctype = "multipart/form-data" }))
+
+    {
+        @Html.AntiForgeryToken()
+
+
+        @Html.HiddenFor(model => model.ID, new { htmlAttributes = new { @Id = "ReminderID" } })
+
+        <div class="row">
+            <div class="form-group col-md-4">
+                @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label" })
+                <div class="">
+                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group col-md-4">
+                @Html.LabelFor(model => model.BirthDate, htmlAttributes: new { @class = "control-label" })
+                <div class="">
+                    @Html.EditorFor(model => model.BirthDate, new { htmlAttributes = new { @Id = "Birth", @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.BirthDate, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group col-md-4">
+                @Html.LabelFor(model => model.StartDate, htmlAttributes: new { @class = "control-label" })
+                <div class="">
+                    @Html.EditorFor(model => model.StartDate, new { htmlAttributes = new { @Id = "Start", @class = "form-control", value = "{0:dd/MM/yyyy}" } })
+                    @Html.ValidationMessageFor(model => model.StartDate, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-md-4">
+                @Html.LabelFor(m => m.PositionID, htmlAttributes: new { @class = "control-label" })
+                <div class="">
+                    @Html.DropDownListFor(m => m.PositionID, new SelectList(Model.Positions, "Value", "Text"), new { @class = "form-control", @Id = "Position" })
+                    @Html.ValidationMessageFor(m => m.PositionID, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group col-md-4">
+                @Html.LabelFor(m => m.EmployeeID, htmlAttributes: new { @class = "control-label" })
+                <div class="">
+                    @Html.DropDownListFor(m => m.EmployeeID, new SelectList(Model.Employees, "Value", "Text"), new { @Id = "employee" })
+                    @Html.ValidationMessageFor(m => m.EmployeeID, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group col-md-4">
+                @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label" })
+                <div class="">
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", @ReadOnly = "ReadOnly" } })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-md-4">
+                @Html.Label("Groups", htmlAttributes: new { @class = "control-label" })
+                <div class="">
+                    @Html.ListBoxFor(m => m.SelectedGroupsID, new SelectList(Model.Groups, "Value", "Text"), new { id = "Group", multiple = "true" })
+                    @Html.ValidationMessageFor(m => m.SelectedGroupsID, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            @*<div class="form-group col-md-4">
+                @Html.Label("Image", htmlAttributes: new { @class = "control-label" })
+                <div class="">
+                    <input type="file" name="image1" id="image1" class="form-control" />
+                    @if (Model.ImagePath != null)
+                    {
+                        <img id="myImg" src="@Url.Content(Model.ImagePath)" height="40px" width="40px" />
+
+                    }
+                </div>
+            </div>*@
+
+            <div class="form-group col-md-4">
+                @Html.Label("Active", htmlAttributes: new { @class = "control-label" })
+                <div class="">
+                    @Html.EditorFor(model => model.IsActive)
+                    @Html.ValidationMessageFor(model => model.IsActive, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="text-center m-5">
+            <div class=" ">
+                <input type="submit" value="Edit" class="btn btn-primary" id="btnSubmit" />
+                <input type="button" value="Back" class="btn btn-primary" onclick="location.href='@Url.Action("Index", "Reminder")'" />
+
+            </div>
+        </div>
+
+    }
+</div>
+
+@*<link href="https://kendo.cdn.telerik.com/2019.2.619/styles/kendo.common.min.css" rel="stylesheet" type="text/css" />
+<link href="https://kendo.cdn.telerik.com/2019.2.619/styles/kendo.default.min.css" rel="stylesheet" type="text/css" />
+<script src="https://kendo.cdn.telerik.com/2019.2.619/js/jquery.min.js"></script>
+<script src="https://kendo.cdn.telerik.com/2019.2.619/js/kendo.all.min.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+<link href="~/Scripts/bootstrap-multiselect.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-multiselect.js"></script>*@
+
+
+<script>
+    $(document).ready(function () {
+        $('#Position').multiselect({
+            includeSelectAllOption: false,
+            enableCaseInsensitiveFiltering: true,
+            enableFiltering: true,
+            multiselect: false,
+            maxHeight: 200
+        });
+
+
+        $('#employee').multiselect({
+            includeSelectAllOption: false,
+            enableCaseInsensitiveFiltering: true,
+            enableFiltering: true,
+            multiselect: false,
+            maxHeight: 200
+        });
+
+
+        $('#Group').multiselect({
+            includeSelectAllOption: true,
+            enableCaseInsensitiveFiltering: true,
+            enableFiltering: true,
+            maxHeight: 200
+        });
+
+
+        var presentDate = new Date();
+        var varDate = new Date((new Date().getFullYear() - 18), 0, 1);
+        $("#Birth").kendoDatePicker({
+            format: "dd/MM/yyyy",
+            max: varDate
+        });
+
+        $("#Start").kendoDatePicker({
+            format: "dd/MM/yyyy",
+            min: presentDate,
+        });
+
+        var start = $("#Birth").kendoDatePicker({
+            format: "dd/MM/yyyy"
+        }).data("kendoDatePicker");
+
+        var end = $("#Start").kendoDatePicker({
+            format: "dd/MM/yyyy"
+        }).data("kendoDatePicker");
+
+        start.max(end.value());
+        end.min(start.value());
+        var nowDate = Date.now.toString();
+        //'GlobalExposures / Replicate ? q = ' + $("#HdnReplicateID").val()+ "&ContractStatusID=" + $("#ContractStatusID").val();
+        $('#employee').change(function () {
+            $("#EmailError").hide();
+            $('#btnSubmit').removeAttr('disabled');
+            var EmploeeID = $('#employee').val();
+
+            $.ajax({
+                url: '@Url.Action("FetchEmail", "Reminder")/?ID=' + EmploeeID + "&ReminderID=" + @Model.ID ,
+                type: "GET",
+                cache: false,
+                async: false,
+                includeSelectAllOption: true,
+                enableCaseInsensitiveFiltering: true,
+                enableFiltering: true,
+                //data: { ID: EmploeeID },
+                datatype: "json",
+                success: function (response) {
+                    $('#Email').val(response.Email);
+                    var lblEmailValidation = $("#EmailError");
+                    var btnSubmit = $('#btnSubmit');
+                    debugger;
+                    if (response.CanBeUsed) {
+                        lblEmailValidation.hide();
+                        btnSubmit.removeAttr('disabled');
+                    } else {
+                        lblEmailValidation.show();
+                        btnSubmit.attr('disabled', 'true');
+                    }
+                },
+                error: function (error) {
+                    debugger;
+                    alert(error);
+                }
+            });
+        });
+
+        $("form").submit(function () {
+        debugger;
+        $('button[type=button], input[type=button]').prop('disabled', true);
+        $('button[type=submit], input[type=submit]').prop('disabled', true);
+        $("form").each(function () { $.data($(this)[0], 'validator', false); });
+        var fom = $("form");
+        $.validator.unobtrusive.parse(fom);
+        if ($("form").valid()) {
+            //fillFieldsForSubmit();
+        }
+        else {
+            $("form").valid();
+            $("form").each(function () { $.data($(this)[0], 'validator', false); });
+            $.validator.unobtrusive.parse("form");
+            $('button[type=button], input[type=button]').removeAttr('disabled');
+            $('button[type=submit], input[type=submit]').removeAttr('disabled');
+        }
+    });
+
+    });
+
+
+
+    //Image Uploader
+    $(function () {
+        debugger;
+        $(":file").change(function () {
+            if (this.files && this.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = imageIsLoaded;
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
+    });
+
+    function imageIsLoaded(e) {
+        $('#myImg').attr('src', e.target.result);
+    };
+
+</script>

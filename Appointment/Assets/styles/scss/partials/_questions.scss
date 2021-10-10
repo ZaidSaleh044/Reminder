@@ -1,0 +1,84 @@
+.progress-step .progress-content, 
+.progress-step ul
+{
+  display: none;
+}
+
+.progress-step.is-active .progress-content,
+.progress-step.is-active ul{
+  display: block;
+}
+
+.progress-tracker--vertical .progress-marker::after {
+  left: auto;
+  top: 12px;
+  right: 11.3px;
+  width: 1px;
+  height: 100%;
+}
+
+.progress-step.is-complete .progress-marker::after, .progress-step.is-progress .progress-marker::after {
+  background-color: $primaryColor;
+}
+
+.progress-text{
+  width: 100%;
+}
+
+.progress-step{
+  .progress-marker span{
+  display:none;
+  }
+
+  &.is-complete{
+    .progress-marker span{
+      position: absolute;
+      background-color: $primaryColor;
+    border-radius: 0;
+      top: 4px;
+      z-index: 21;
+      left: 4px;
+      font-size: 8px;
+      width: 16px;
+      height: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+  }
+  
+}
+.progress-tracker--vertical.progress-tracker-sub .progress-marker::after {
+  right: 4.8px;
+}
+.progress-step.is-active .progress-marker::before, .progress-tracker--vertical.progress-tracker-sub .progress-step.is-active .progress-marker::before, .progress-step.is-active .progress-tracker--vertical.progress-tracker-sub .progress-step.is-active .progress-marker::before, .progress-step.is-active .progress-tracker--vertical.progress-tracker-sub .progress-step.is-complete .progress-marker::before, .progress-step.is-complete .progress-tracker--vertical.progress-tracker-sub .progress-step.is-complete .progress-marker::before {
+  background-color: $primaryColor;
+  border-color: $primaryColor;
+}
+
+
+.progress-marker::after{
+  z-index: 0 !important;
+}
+
+
+.progress-tracker--vertical.progress-view{
+
+  .progress-step{
+
+    .progress-title{
+      font-size: 15px !important;
+    }
+    .progress-step{
+      .progress-text{
+        color: #333 !important;
+        padding-left: 1.2rem;
+     
+      }
+      .progress-title{
+        padding:0;
+        font-weight: bold !important;
+      }
+    }
+  }
+}

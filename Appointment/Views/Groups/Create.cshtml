@@ -1,0 +1,93 @@
+﻿
+<link href="~/Scripts/bootstrap-multiselect.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-multiselect.js"></script>
+
+
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+@model  Appointment.ViewModel.Models.EmployeesGroupsViewModel
+
+@{
+    ViewBag.Title = "Create new Group";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<div class="container">
+    <h1>New Group</h1>
+    <hr />
+    <br />
+
+
+    @using (Html.BeginForm("Create", "Groups", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="row mb-3">
+            <div class="form-group col-md-6">
+                @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="">
+
+                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="form-group col-md-6">
+                @Html.Label("Employees", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="">
+                    <div class="dropdown">
+                        @Html.DropDownListFor(m => m.SelectedEmployeesID, new SelectList(Model.Employees, "Value", "Text"), new { id = "Employees", multiple = "true" })
+                        @Html.ValidationMessageFor(m => m.SelectedEmployeesID, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center m-5">
+            <div class="">
+                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="button" value="Back" class="btn btn-primary" onclick="location.href='@Url.Action("Groups", "Groups")'" />
+            </div>
+        </div>
+    }
+</div>
+
+<br />
+<br />
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#Employees').multiselect({
+            includeSelectAllOption: true,
+            enableCaseInsensitiveFiltering: true,
+            enableFiltering: true,
+            maxHeight: 200
+        });
+
+
+
+
+        $("form").submit(function () {
+            debugger;
+            $('button[type=button], input[type=button]').prop('disabled', true);
+            $('button[type=submit], input[type=submit]').prop('disabled', true);
+            $("form").each(function () { $.data($(this)[0], 'validator', false); });
+            var fom = $("form");
+            $.validator.unobtrusive.parse(fom);
+            if ($("form").valid()) {
+                //fillFieldsForSubmit();
+            }
+            else {
+                $("form").valid();
+                $("form").each(function () { $.data($(this)[0], 'validator', false); });
+                $.validator.unobtrusive.parse("form");
+                $('button[type=button], input[type=button]').removeAttr('disabled');
+                $('button[type=submit], input[type=submit]').removeAttr('disabled');
+            }
+        });
+    })
+
+</script>

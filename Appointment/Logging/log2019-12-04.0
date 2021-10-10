@@ -1,0 +1,103 @@
+2019-12-04 13:26:48,634 [1] DEBUG | WebLogger - 13
+2019-12-04 13:26:48,723 [1] DEBUG | WebLogger - 35
+2019-12-04 13:26:48,727 [1] DEBUG | WebLogger - got to 
+2019-12-04 13:35:00,431 [DefaultQuartzScheduler_Worker-2] DEBUG | WebLogger - send emails started at 12/4/2019 1:35:00 PM - Execute
+2019-12-04 13:35:00,816 [DefaultQuartzScheduler_Worker-2] DEBUG | WebLogger - send emails end at 12/4/2019 1:35:00 PM - Execute
+2019-12-04 13:44:14,640 [1] DEBUG | WebLogger - 13
+2019-12-04 13:44:14,675 [1] DEBUG | WebLogger - 35
+2019-12-04 13:44:14,685 [1] DEBUG | WebLogger - got to 
+2019-12-04 13:48:31,457 [35] ERROR | WebLogger - Exception Caught: 
+System.UnauthorizedAccessException: Attempted to perform an unauthorized operation.
+   at Appointment.Controllers.BaseController.OnAuthentication(AuthenticationContext filterContext) in E:\WorkSpaceAndRealeses\Traninng\Appointment\Appointment\Controllers\BaseController.cs:line 35
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAuthenticationFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__0(AsyncCallback asyncCallback, Object asyncState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.Begin(AsyncCallback callback, Object state, Int32 timeout)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.BeginInvokeAction(ControllerContext controllerContext, String actionName, AsyncCallback callback, Object state)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_0(AsyncCallback asyncCallback, Object asyncState, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallBeginDelegate(AsyncCallback callback, Object callbackState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.Begin(AsyncCallback callback, Object state, Int32 timeout)
+   at System.Web.Mvc.Controller.BeginExecuteCore(AsyncCallback callback, Object state)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.Begin(AsyncCallback callback, Object state, Int32 timeout)
+   at System.Web.Mvc.Controller.BeginExecute(RequestContext requestContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_0(AsyncCallback asyncCallback, Object asyncState, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallBeginDelegate(AsyncCallback callback, Object callbackState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.Begin(AsyncCallback callback, Object state, Int32 timeout)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2019-12-04 13:48:50,739 [38] DEBUG | WebLogger - test
+2019-12-04 13:49:25,236 [37] DEBUG | WebLogger - test
+2019-12-04 13:49:26,575 [30] DEBUG | WebLogger - test
+2019-12-04 13:50:01,224 [26] DEBUG | WebLogger - test
+2019-12-04 13:54:53,730 [35] DEBUG | WebLogger - test
+2019-12-04 13:55:35,562 [26] ERROR | WebLogger - Exception Caught: 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Kendo.Mvc.Infrastructure.Implementation.FilterNodeVisitor.Visit(PropertyNode propertyNode)
+   at Kendo.Mvc.Infrastructure.FilterDescriptorFactory.Create(String input)
+   at Kendo.Mvc.UI.DataSourceRequestModelBinder.BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   at Kendo.Mvc.UI.Grid`1.ProcessDataSource()
+   at Kendo.Mvc.UI.Grid`1.WriteHtml(HtmlTextWriter writer)
+   at Kendo.Mvc.UI.WidgetBase.ToHtmlString()
+   at Kendo.Mvc.UI.Fluent.WidgetBuilderBase`2.ToHtmlString()
+   at System.Web.WebPages.WebPageBase.Write(Object value)
+   at ASP._Page_Views_Reminder_Index_cshtml.Execute() in E:\WorkSpaceAndRealeses\Traninng\Appointment\Appointment\Views\Reminder\Index.cshtml:line 16
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   at System.Web.WebPages.StartPage.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__5(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2019-12-04 13:56:35,883 [26] ERROR | WebLogger - Exception Caught: 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Kendo.Mvc.Infrastructure.Implementation.FilterNodeVisitor.Visit(PropertyNode propertyNode)
+   at Kendo.Mvc.Infrastructure.FilterDescriptorFactory.Create(String input)
+   at Kendo.Mvc.UI.DataSourceRequestModelBinder.BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   at Kendo.Mvc.UI.Grid`1.ProcessDataSource()
+   at Kendo.Mvc.UI.Grid`1.WriteHtml(HtmlTextWriter writer)
+   at Kendo.Mvc.UI.WidgetBase.ToHtmlString()
+   at Kendo.Mvc.UI.Fluent.WidgetBuilderBase`2.ToHtmlString()
+   at System.Web.WebPages.WebPageBase.Write(Object value)
+   at ASP._Page_Views_Reminder_Index_cshtml.Execute() in E:\WorkSpaceAndRealeses\Traninng\Appointment\Appointment\Views\Reminder\Index.cshtml:line 16
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   at System.Web.WebPages.StartPage.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__5(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2019-12-04 13:56:37,665 [33] DEBUG | WebLogger - test
+2019-12-04 14:01:09,148 [24] DEBUG | WebLogger - test
+2019-12-04 14:11:13,913 [40] DEBUG | WebLogger - test
+2019-12-04 14:11:15,231 [5] DEBUG | WebLogger - test
+2019-12-04 14:56:20,086 [135] DEBUG | WebLogger - test
+2019-12-04 14:56:29,016 [131] DEBUG | WebLogger - test

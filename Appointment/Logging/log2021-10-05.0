@@ -1,0 +1,17 @@
+2021-10-05 10:34:57,078 [35] INFO  | WebLogger - Global.asax - Application_End Application Shutdown 
+2021-10-05 10:37:08,521 [128] DEBUG | WebLogger - 10
+2021-10-05 10:37:08,561 [128] DEBUG | WebLogger - 38
+2021-10-05 10:37:08,565 [128] DEBUG | WebLogger - got to 
+2021-10-05 10:37:20,557 [40] DEBUG | WebLogger - test
+2021-10-05 10:38:00,578 [DefaultQuartzScheduler_Worker-1] DEBUG | WebLogger - send emails started at 10/5/2021 10:38:00 AM - Execute
+2021-10-05 10:39:46,545 [DefaultQuartzScheduler_Worker-1] DEBUG | WebLogger - send emails end at 10/5/2021 10:39:46 AM - Execute
+2021-10-05 10:41:38,990 [14] INFO  | WebLogger - Global.asax - Application_End Application Shutdown 
+2021-10-05 10:42:04,612 [34] DEBUG | WebLogger - 10
+2021-10-05 10:42:04,658 [34] DEBUG | WebLogger - 46
+2021-10-05 10:42:04,661 [34] DEBUG | WebLogger - got to 
+2021-10-05 10:42:18,664 [151] DEBUG | WebLogger - test
+2021-10-05 10:43:48,839 [112] DEBUG | WebLogger - test
+2021-10-05 10:44:56,403 [151] DEBUG | WebLogger - test
+2021-10-05 10:46:00,477 [DefaultQuartzScheduler_Worker-1] DEBUG | WebLogger - send emails started at 10/5/2021 10:46:00 AM - Execute
+2021-10-05 10:49:07,738 [DefaultQuartzScheduler_Worker-1] DEBUG | WebLogger - send emails end at 10/5/2021 10:49:07 AM - Execute
+2021-10-05 10:52:52,759 [96] INFO  | WebLogger - Global.asax - Application_End Application Shutdown 

@@ -1,0 +1,87 @@
+﻿
+.captcha-innr-cont {
+    border: 1px solid rgb(200, 200, 200);
+    /*background-image: url(images/CaptchaBackground.png);*/
+    background-color: rgb(230, 230, 230);
+    background-size: 100% 100%;
+}
+
+
+.captcha-label {
+    text-align: left;
+    width: 100%;
+    position: relative;
+}
+
+.capimage-div {
+    float: left;
+}
+
+.capref-div {
+    float: right;
+}
+
+.captcha-cont .validation-label {
+    text-align: left;
+    font-size: 12px;
+}
+
+
+
+.captcha-div {
+    height: 100px;
+    width: 100%;
+    background-color: rgb(255, 255, 230);
+}
+
+    .captcha-div div img {
+        float: left;
+    }
+
+    .captcha-div .refresh a img {
+        float: left;
+        width: 30px;
+        height: 30px;
+    }
+
+    .captcha-div .refresh {
+        height: inherit;
+        width: initial;
+        background-color: #fafafa;
+        float: right;
+        right: 0;
+    }
+
+    .captcha-div .captch-img {
+        height: inherit;
+        width: initial;
+        background-color: rgb(255, 255, 230);
+        float: left;
+    }
+
+.capref-div a img {
+    float: left;
+    width: 20px;
+    cursor: pointer;
+}
+
+
+.captcha-label {
+    font-size: 10px;
+}
+
+
+.required label.captcha-label span:after {
+    content: "*";
+    color: red;
+}
+
+
+.captcha-label {
+    font-size: 10px;
+}
+
+
+.captcha-label {
+    font-size: 10px;
+}

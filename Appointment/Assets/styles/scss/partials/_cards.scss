@@ -1,0 +1,535 @@
+// Users Grids
+
+.users {
+    h6{
+        a{
+            color: $blackColor;
+            text-decoration: none;
+        }
+    }
+}
+
+.loans-programs-cont{
+.card{
+    border:0;
+    -webkit-transition: -webkit-transform .6s;
+    transition: -webkit-transform .6s;
+    -o-transition: -o-transform .6s;
+    -moz-transition: transform .6s, -moz-transform .6s;
+    transition: transform .6s;
+    transition: transform .6s, -webkit-transform .6s, -moz-transform .6s, -o-transform .6s;
+    -webkit-box-shadow: 9px 7px 30px rgba(72, 73, 121, 0.15);
+    -moz-box-shadow: 9px 7px 30px rgba(72, 73, 121, 0.15);
+    box-shadow: 0 4px 5px rgba(72, 73, 121, 0.15);
+}
+.card:hover{
+    webkit-transform: translateY(-20px);
+    -moz-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    -o-transform: translateY(-20px);
+    transform: translateY(-20px);
+    -webkit-box-shadow: 9px 7px 30px rgba(72, 73, 121, 0.15);
+    -moz-box-shadow: 9px 7px 30px rgba(72, 73, 121, 0.15);
+    box-shadow: 9px 7px 30px rgba(72, 73, 121, 0.15);
+}
+
+    .card-body{
+        padding: 0;
+    }
+
+    a{
+        color: black;
+       
+    }
+    a:hover {
+        color: $primaryColor;
+      
+    }
+}
+
+.my-requests-cont{
+    .card-body{
+        padding: 0;
+    }
+
+    img{
+        border-radius: 0 0 0 0;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .my-requests-cont{
+        img{
+            height: 150px !important;
+        }
+}
+
+.card-body.p-5 {
+    padding: 1.5rem!important;
+
+    .col-md-3{
+        margin-bottom: 2rem;
+    }
+}
+    
+}
+
+.card{
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+}
+
+a:hover, a:focus, a:active {
+    .card {
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+        transition:.2s all ease-in-out
+    }
+}
+
+.QList {
+
+    .card{
+        border:0;
+    }
+    .card-header {
+        background-color: #fff;
+        border:none;
+    }
+
+    .btn {
+        box-shadow: none;
+        width: 100%;
+        text-align: left;
+        color: $blackColor;
+        white-space: normal;
+        padding-left:0;
+        height: auto;
+    }
+
+    .btn-link:hover, .btn-link:focus {
+        color: $primaryColor;
+        text-decoration: none;
+    }
+
+    .collapse {
+        background-color: rgba(205, 152, 44, .1);
+    }
+
+    button[aria-expanded="true"] + .fa-arrow-right {
+        transform: rotate(90deg);
+        transition: all .4s ease-in-out;
+        color: $primaryColor;
+    }
+
+    .card-header h5 {
+        position: relative;
+    }
+
+    .fa-arrow-right {
+        position: absolute;
+        font-size: .8rem;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        color: #aaa;
+        transition: all .4s ease-in-out;
+    }
+
+    .accordion .accordion .btn {
+        font-size: .75rem;
+    }
+
+    .accordion .accordion .card, .accordion .accordion .card-header {
+        border: 0;
+        border-radius: 0;
+        background-color: transparent;
+    }
+
+    .accordion .accordion .fa-arrow-right {
+        font-size: .9rem;
+    }
+
+    .accordion .accordion .card-body {
+        padding: 1rem 3rem;
+        font-size: .8rem;
+    }
+
+    .accordion .accordion .card-header {
+        padding: 0.5rem 1.25rem;
+    }
+
+    .accordion .accordion button {
+        color: #555;
+    }
+}
+
+
+.loan-cards {
+
+    .card-container {
+        width: 25%;
+
+        .shortcut {
+            display: flex;
+            transition: all .2s ease-in-out;
+        }
+
+        .details {
+            display: none;
+            transition: all .2s ease-in-out;
+        }
+
+        .card {
+            height: 350px;
+            width: 100%;
+            border: none;
+            outline: 1px solid $primaryColor;
+
+
+            .rounded-circle {
+                width: 100px;
+                height: 100px;
+                background-color: #F2E4C0;
+                position: absolute;
+                top: 50px;
+                border: 3px solid #fff;
+                left: 0;
+                right: 0;
+            }
+
+            button {
+                border-color: #F2E4C0;
+                background-color: #F2E4C0;
+                color: $accentColor;
+                font-size: 13px;
+            }
+
+            .top-container {
+                height: 100px;
+            }
+        }
+
+        &.active {
+            width: 50%;
+            flex-basis: auto;
+            max-width: 50%;
+
+            .shortcut {
+                display: none;
+                transition: all .2s ease-in-out;
+            }
+
+            .details {
+                display: flex;
+                transition: all .2s ease-in-out;
+
+                .card {
+                    min-height: 500px;
+                    height: auto;
+                    border: none;
+                    outline: 1px solid $primaryColor;
+
+                    .rounded-circle {
+                        width: 140px;
+                        height: 140px;
+                        background-color: $primaryColor;
+                        border: 3px solid #fff;
+                        left: 0;
+                        right: 0;
+
+
+                        &.selected {
+                            background-color: #fff;
+                            border-color: $success;
+                        }
+                    }
+
+                    button {
+                        border-color: $primaryColor;
+                        background-color: $primaryColor;
+                        color: #fff;
+                        font-size: 13px;
+                    }
+
+                    .top-container {
+                        height: 130px;
+                    }
+
+                    .table {
+                        th, td {
+                            font-size: .7rem;
+                            vertical-align: middle;
+                            padding: .4rem .75rem;
+                        }
+
+                        label {
+                            margin-bottom: 0;
+                        }
+
+                        &.table-striped tbody tr:nth-of-type(odd) {
+                            background-color: $lightPrimary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .input-group-prepend {
+        .input-group-text {
+            font-size: .7rem;
+            width: 70px;
+            background-color: $lightPrimary;
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: 1023px){
+    .loan-cards {
+        .main-cont {
+            width: 100%;
+            min-height: 850px;
+            position: relative;
+
+            &.h-1000 {
+                min-height: 1150px;
+            }
+        }
+
+        .card-container {
+            width: 95%;
+            position: absolute;
+            z-index: 1;
+            top: 50px;
+            left: 0px;
+
+
+            &:first-of-type {
+                left: -20px;
+                right: auto;
+                z-index: 0;
+                top: 100px;
+            }
+
+            &:last-of-type {
+                right: -20px;
+                left: auto;
+                z-index: 0;
+                top: 100px;
+            }
+
+
+            .shortcut {
+                display: flex;
+                transition: all .2s ease-in-out;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $midlightPrimary;
+                }
+            }
+
+            .details {
+                display: none;
+                transition: all .2s ease-in-out;
+            }
+
+            .card {
+                height: 400px;
+                width: 100%;
+                border: none;
+                outline: 1px solid $primaryColor;
+
+
+                .rounded-circle {
+                    width: 140px;
+                    height: 140px;
+                    background-color: $primaryColor;
+                    position: absolute;
+                    top: 50px;
+                    border: 3px solid #fff;
+                    left: 0;
+                    right: 0;
+                }
+
+                .top-container {
+                    height: 130px;
+                }
+            }
+
+            &.active {
+                width: 95%;
+                z-index: 2;
+                left: 0;
+                top: 25px;
+                right: 0;
+                margin: 0 auto;
+
+                &:first-of-type {
+                    left: -30px;
+                }
+
+                &:last-of-type {
+                    right: -30px;
+                }
+
+                + .maximized {
+                    right: 0px;
+                    left: auto;
+                }
+
+                .shortcut {
+                    display: none;
+                    transition: all .2s ease-in-out;
+                }
+
+                .details {
+                    display: flex;
+                    transition: all .2s ease-in-out;
+
+                    .card {
+                        min-height: 500px;
+                        height: auto;
+                        border: none;
+                        outline: 1px solid $primaryColor;
+
+
+
+                        .rounded-circle {
+                            width: 140px;
+                            height: 140px;
+                            background-color: $primaryColor;
+                            border: 3px solid #fff;
+                            right: 0;
+                            left: 0;
+                        }
+
+                        .top-container {
+                            height: 130px;
+                        }
+
+                        .table {
+                            th, td {
+                                font-size: .6rem;
+                                vertical-align: middle;
+                                padding: .4rem .75rem;
+                            }
+
+                            label {
+                                margin-bottom: 0;
+                            }
+
+                            &.table-striped tbody tr:nth-of-type(odd) {
+                                background-color: $lightPrimary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+   
+}
+
+.small-card{
+    width:400px;
+}
+@media only screen and (max-width: 767px) {
+    .small-card {
+        width: 100%;
+    }
+    }
+
+
+.meeting {
+    .videos-main{
+        background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 49%, rgba(255,242,207,1) 49%, rgba(255,242,207,1) 100%);
+        }
+    .close-call {
+        /*rtl:begin:ignore*/
+        transform: rotate(-135deg);
+        /*rtl:end:ignore*/
+    }
+
+    .name {
+        border-radius: 0 0 0 0;
+        bottom: 18px;
+    }
+
+    .video-cont {
+        height: 330px;
+        border-radius: 0;
+
+        video {
+            border-radius: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .meeting {
+        .customer {
+            position: absolute;
+            z-index: 1;
+            top: -60px;
+            right: 10px;
+            width: 130px;
+            height: 140px;
+
+            .video-cont {
+                height: 100%;
+                border-radius: 0;
+
+                video {
+                    border-radius: 0;
+                }
+            }
+
+            .name {
+                display: none;
+            }
+        }
+
+        .agent {
+            height: 100%;
+
+            .video-cont {
+                height: 360px;
+                border-radius: 0;
+
+                video {
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+}
+
+#questionsAccordion {
+    .card-header {
+        background-color:$accentColor2;
+        button {
+            text-decoration:none;
+            svg {
+                transition: .3s all ease-in-out;
+            }
+
+            &[aria-expanded="true"] {
+                svg {
+                    transform: rotate(180deg);
+                    transition: .3s all ease-in-out
+                }
+            }
+        }
+    }
+}

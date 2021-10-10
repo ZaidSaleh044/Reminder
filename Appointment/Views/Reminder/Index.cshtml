@@ -1,0 +1,135 @@
+﻿@model IEnumerable<Appointment.ViewModel.Models.RemindersViewModel>
+
+@{
+    ViewBag.Title = "All reminders";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<div class="container">
+    <h2>Reminders List</h2>
+    <br />
+    <div class="row">
+        <div class="col-md-12">
+            @(Html.Kendo().Grid(Model)
+              .Name("Grid")
+
+              .Columns(columns =>
+              {
+
+                  columns.Bound(p => p.Name).Width(100).Filterable(ftb => ftb.Cell(cell => cell.Operator("contains").SuggestionOperator(FilterType.Contains).Delay(600000)));
+                  columns.Bound(p => p.StartDate).Width(100).Filterable(x=>x.UI("orderDateFilter")).Format("{0:dd/MM/yyyy}");
+                  columns.Bound(p => p.EndDate).Width(100).Format("{0:dd/MM/yyyy}");
+                  columns.Bound(p => p.TypeName).Width(150).Filterable(ftb => ftb.Cell(cell => cell.Operator("contains").SuggestionOperator(FilterType.Contains).Delay(600000)));
+                  columns.Bound(p => p.IsActive).Template(P => P.IsActive.HasValue ? (P.IsActive.Value ? "Active" : "Inactive") : "Inactive").Width(100).ToString();
+
+
+                  columns.Command(command =>
+                  {
+                      command.Custom("Details").Action("Details", "Reminder").HtmlAttributes(new { id = "viewItem", title = "View", style = "width:30px;", value = "View Details" });
+                      command.Custom("Edit").Action("Update", "Reminder").HtmlAttributes(new { id = "editItem", title = "Edit", value = "View Details" });
+                      //command.Custom("Change Status").Action("ReverseStatus", "Reminder");
+                      command.Custom("Delete").Action("ReverseStatus", "Reminder").HtmlAttributes(new { id = "btnDeleteItem", title = "Delete", value = "Delete", onclick = "confirmDeletion(this)" });
+                  }).Width(350);
+              })
+                .ToolBar(toolbar => toolbar.Custom()
+                .Text("New Employee Reminder")
+                .Action("NewEmployeeReminder", "Reminder"))
+                .ToolBar(toolbar => toolbar.Custom()
+                .Text("New General Reminder")
+                .Action("NewGeneralReminder", "Reminder"))
+              .Editable(editable => editable.Enabled(false).Mode(GridEditMode.InCell))
+              .Pageable(pageable => pageable
+                       .Refresh(true)
+                       .PageSizes(true)
+                       .ButtonCount(5))
+              .Sortable()
+              .Navigatable()
+              .Scrollable()
+              //.Selectable(selectable => selectable.Enabled(true).Mode(GridSelectionMode.Single).Type(GridSelectionType.Row))
+              //.Filterable(filterable => filterable.Mode(GridFilterMode.Row))
+              .Filterable(filterable => filterable.Messages(m => m.IsFalse("Inactive"))
+              .Messages(m => m.IsTrue("Acitve")))
+              .HtmlAttributes(new { style = "height:400px;" })
+              .DataSource(dataSource => dataSource
+                  .Server()
+                  .PageSize(20)
+                  .Model(model => model.Id(p => p.ID))
+                  .Read("Index", "Reminder")
+                  .Filter(f => f.Add(a => a.IsActive).IsEqualTo(true))
+              )
+            )
+        </div>
+
+    </div>
+</div>
+<style>
+    .k-grid .k-state-selected {
+        background: #1cacff;
+        color: #000000;
+    }
+
+    .k-grid tr.k-state-selected:hover {
+        background-color: #c5f1ff;
+    }
+</style>
+
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        //var originalFilter = kendo.data.DataSource.fn.filter;
+
+        //kendo.data.DataSource.fn.filter = function (e) {
+        //    debugger;
+        //    if (arguments.length > 0) {
+        //        var filteringField = arguments[0].filters[1].field;
+        //        var filteringValue = arguments[0].filters[1].value;
+
+        //        // -- PUT YOUR FUNCTIONALITY HERE --
+        //    }
+        //    return originalFilter.apply(this, arguments);
+        //};
+
+        $("form.k-edit-form").kendoValidator();
+
+
+        $(document).on('click', '#btnDeleteItem', function (e) {
+            debugger;
+            e.preventDefault();
+
+            // show popup
+            bootbox.confirm({
+                title: "Delete Item",
+                message: '<div>' + "You are about to delete this reminder with the employee data, To proceed press Continue" + '</div>',
+                buttons: {
+                    'confirm': {
+                        label: "Continue"
+                    },
+                    'cancel': {
+                        label: "Cancel"
+                    }
+                },
+                callback: function (result) {
+                    if (result) {
+                         window.location.href = e.currentTarget.pathname;
+                        return;
+                    }
+                    else {
+                        return;
+                    }
+                }
+            });
+        })
+
+
+    });
+
+    function orderDateFilter(element) {
+        debugger;
+        element.kendoDatePicker({
+            format: "dd/MM/yyyy" // set custom defined format
+        });
+    }
+</script>
+

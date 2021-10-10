@@ -1,0 +1,137 @@
+﻿@model Appointment.ViewModel.Models.SettingsViewModel
+
+@{
+    ViewBag.Title = "Settings";
+
+
+}
+<style>
+    #lable_text{
+        text-align:left
+    }
+</style>
+
+
+    @using (Html.BeginForm("Edit", "Settings", FormMethod.Get))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="container">
+                <h2>Settings</h2>
+                <hr />
+            <div class="form-horizontal">
+
+                <div class="row">
+                    <div class="form-group col-md-6 ">
+                        @Html.LabelFor(model => model.settingsView.EmailAdmin, htmlAttributes: new { @class = "control-label ", @id = "lable_text" }):
+                        @ViewBag.AdminEmail
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        @Html.LabelFor(model => model.settingsView.BirthDayEmailText, htmlAttributes: new { @class = "control-label ", @id = "lable_text" }):
+
+                        @ViewBag.BirthdayEmailText
+
+                    </div>
+
+
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        @Html.LabelFor(model => model.settingsView.AnniversaryEmailText, htmlAttributes: new { @class = "control-label ", @id = "lable_text" }):
+
+                        @ViewBag.AnniversaryEmailText
+
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        @Html.LabelFor(model => model.settingsView.BirthdayReminder, htmlAttributes: new { @class = "control-label ", @id = "lable_text" }):
+                        @ViewBag.BirthdayReminder
+                    </div>
+
+                </div>
+                <div class="row">
+
+                    <div class="form-group col-md-6">
+                        @Html.LabelFor(model => model.settingsView.AnniversaryReminder, htmlAttributes: new { @class = "control-label ", @id = "lable_text" }):
+                        @ViewBag.AnniversaryReminder
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        @Html.LabelFor(model => model.settingsView.EventReminder, htmlAttributes: new { @class = "control-label ", @id = "lable_text" }):
+                        @ViewBag.EventReminder
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        @Html.LabelFor(model => model.settingsView.SendBirthday, htmlAttributes: new { @class = "control-label ", @id = "lable_text" }):
+                        @ViewBag.SendBirthday
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        @Html.LabelFor(model => model.settingsView.SendAnniversary, htmlAttributes: new { @class = "control-label ", @id = "lable_text" }):
+                        @ViewBag.SendAnniversary
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        @Html.LabelFor(model => model.settingsView.SendEvent, htmlAttributes: new { @class = "control-label ", @id = "lable_text" }):
+                        @ViewBag.SendEvent
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        @Html.LabelFor(model => model.settingsView.UpComingReminder, htmlAttributes: new { @class = "control-label ", @id = "lable_text" }):
+                        @ViewBag.UpComingReminder
+                    </div>
+                </div>
+                <div class="row">
+
+
+
+                    <div class="form-group col-md-6">
+                        @Html.LabelFor(model => model.settingsView.BirthdayImagePath, "Saved Birthday Image", htmlAttributes: new { @class = "control-label ", @id = "lable_text" }):
+                        <img id="myImg" src="@Url.Content(@ViewBag.BirthdayImagePath)" height="40px" width="40px" />
+
+                    </div>
+                    
+                    <div class="form-group col-md-6">
+                        @Html.LabelFor(model => model.settingsView.AnniversaryImagePath, "Saved Anniversary Image", htmlAttributes: new { @class = "control-label ", @id = "lable_text" }):
+                        <img id="anniversaryImage" src="@Url.Content(@ViewBag.AnniversaryImagePath)" height="40px" width="40px" />
+
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="text-center m-5">
+                    <div class="">
+                        <input type="submit" value="Edit" class="btn btn-primary" />
+                    </div>
+                </div>
+            </div>
+    </div>
+    }
+<script>
+    jQuery(function () {
+        debugger;
+        $("form").submit(function () {
+            // submit more than once return false
+            $(this).submit(function () {
+                return false;
+            });
+            // submit once return true
+            return true;
+        });
+    });
+</script>

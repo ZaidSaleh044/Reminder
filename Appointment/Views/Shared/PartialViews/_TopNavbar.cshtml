@@ -1,0 +1,26 @@
+﻿
+<ul class="navbar-nav ml-auto align-items-center">
+    <li class="nav-item">
+        <a class="nav-link" href="@Url.Action("Index", "Calendar")">Calendar</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="@Url.Action("Index", "Reminder")">Reminder</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="@Url.Action("Groups", "Groups")">Groups</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="@Url.Action("Index", "Employees")">Employees</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="@Url.Action("Index", "Settings")">Settings</a>
+    </li>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropbtn" href="#">Reports</a>
+        <div class="dropdown-content">
+            <a class="nav-link" href="@Url.Action("RemindersDistribution", "Reports")">Reminders Distribution</a>
+            <a class="nav-link" href="@Url.Action("ReminderReport", "Reports")">Reminder Report</a>
+        </div>
+    </li>
+
+</ul>

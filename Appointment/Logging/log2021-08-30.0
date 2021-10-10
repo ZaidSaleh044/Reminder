@@ -1,0 +1,57 @@
+2021-08-30 11:59:27,309 [52] DEBUG | WebLogger - test
+2021-08-30 12:00:38,730 [106] DEBUG | WebLogger - test
+2021-08-30 12:08:37,559 [52] ERROR | WebLogger - Exception Caught: 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Appointment.MvcApplication.Application_End() in C:\Work\AppointmentTaningFaLL\Appointment\Appointment\Global.asax.cs:line 71
+2021-08-30 12:29:35,883 [10] DEBUG | WebLogger - 12
+2021-08-30 12:29:35,921 [10] DEBUG | WebLogger - 30
+2021-08-30 12:29:35,923 [10] DEBUG | WebLogger - got to 
+2021-08-30 12:29:50,052 [103] DEBUG | WebLogger - test
+2021-08-30 12:30:00,757 [DefaultQuartzScheduler_Worker-1] DEBUG | WebLogger - send emails started at 8/30/2021 12:30:00 PM - Execute
+2021-08-30 12:31:03,234 [DefaultQuartzScheduler_Worker-1] ERROR | WebLogger - Exception Caught: 
+System.IO.FileNotFoundException: ~/img/2021082911050020190829013036congrates.jpg
+   at System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   at Appointment.Business.Job.MailSender.RemindEmailBirthday(String name, DateTime birthdate) in C:\Work\AppointmentTaningFaLL\Appointment\Appointment.Business\Job\MailSender.cs:line 244
+   at Appointment.Business.Job.MailSender.Execute(IJobExecutionContext context) in C:\Work\AppointmentTaningFaLL\Appointment\Appointment.Business\Job\MailSender.cs:line 110
+2021-08-30 12:32:45,444 [52] INFO  | WebLogger - Global.asax - Application_End Application Shutdown 
+2021-08-30 12:33:04,126 [37] DEBUG | WebLogger - 12
+2021-08-30 12:33:04,173 [37] DEBUG | WebLogger - 33
+2021-08-30 12:33:04,176 [37] DEBUG | WebLogger - got to 
+2021-08-30 12:33:13,498 [52] DEBUG | WebLogger - test
+2021-08-30 12:33:39,747 [103] INFO  | WebLogger - Global.asax - Application_End Application Shutdown 
+2021-08-30 12:33:57,128 [5] DEBUG | WebLogger - 12
+2021-08-30 12:33:57,164 [5] DEBUG | WebLogger - 35
+2021-08-30 12:33:57,167 [5] DEBUG | WebLogger - got to 
+2021-08-30 12:34:07,511 [46] DEBUG | WebLogger - test
+2021-08-30 12:35:00,477 [DefaultQuartzScheduler_Worker-1] DEBUG | WebLogger - send emails started at 8/30/2021 12:35:00 PM - Execute
+2021-08-30 12:51:31,991 [DefaultQuartzScheduler_Worker-1] ERROR | WebLogger - Exception Caught: 
+System.IO.FileNotFoundException: ~/img/2021082911050020190829013036congrates.jpg
+   at System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   at Appointment.Business.Job.MailSender.SendEmailBirthday(String name, String email) in C:\Work\AppointmentTaningFaLL\Appointment\Appointment.Business\Job\MailSender.cs:line 155
+   at Appointment.Business.Job.MailSender.Execute(IJobExecutionContext context) in C:\Work\AppointmentTaningFaLL\Appointment\Appointment.Business\Job\MailSender.cs:line 70
+2021-08-30 12:57:01,810 [109] INFO  | WebLogger - Global.asax - Application_End Application Shutdown 
+2021-08-30 12:57:36,425 [5] DEBUG | WebLogger - 12
+2021-08-30 12:57:36,482 [5] DEBUG | WebLogger - 58
+2021-08-30 12:57:36,485 [5] DEBUG | WebLogger - got to 
+2021-08-30 12:57:52,161 [52] DEBUG | WebLogger - test
+2021-08-30 12:58:01,059 [DefaultQuartzScheduler_Worker-1] DEBUG | WebLogger - send emails started at 8/30/2021 12:58:01 PM - Execute
+2021-08-30 13:01:11,829 [DefaultQuartzScheduler_Worker-1] ERROR | WebLogger - Exception Caught: 
+System.IO.FileNotFoundException: ~/img/2021082911050020190829013036congrates.jpg
+   at System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   at Appointment.Business.Job.MailSender.SendEmailBirthday(String name, String email) in C:\Work\AppointmentTaningFaLL\Appointment\Appointment.Business\Job\MailSender.cs:line 157
+   at Appointment.Business.Job.MailSender.Execute(IJobExecutionContext context) in C:\Work\AppointmentTaningFaLL\Appointment\Appointment.Business\Job\MailSender.cs:line 70
+2021-08-30 13:01:12,482 [105] INFO  | WebLogger - Global.asax - Application_End Application Shutdown 
+2021-08-30 13:01:40,377 [37] DEBUG | WebLogger - 13
+2021-08-30 13:01:40,405 [37] DEBUG | WebLogger - 02
+2021-08-30 13:01:40,407 [37] DEBUG | WebLogger - got to 
+2021-08-30 13:01:41,255 [40] INFO  | WebLogger - Global.asax - Application_End Application Shutdown 
+2021-08-30 13:01:58,563 [37] DEBUG | WebLogger - 13
+2021-08-30 13:01:58,599 [37] DEBUG | WebLogger - 03
+2021-08-30 13:01:58,601 [37] DEBUG | WebLogger - got to 
+2021-08-30 13:02:09,532 [74] DEBUG | WebLogger - test
+2021-08-30 13:03:36,198 [1] DEBUG | WebLogger - 13
+2021-08-30 13:03:36,238 [1] DEBUG | WebLogger - 04
+2021-08-30 13:03:36,240 [1] DEBUG | WebLogger - got to 
+2021-08-30 13:03:49,306 [14] DEBUG | WebLogger - test
+2021-08-30 13:04:00,768 [DefaultQuartzScheduler_Worker-1] DEBUG | WebLogger - send emails started at 8/30/2021 1:04:00 PM - Execute
+2021-08-30 13:06:05,944 [DefaultQuartzScheduler_Worker-1] DEBUG | WebLogger - send emails end at 8/30/2021 1:06:05 PM - Execute

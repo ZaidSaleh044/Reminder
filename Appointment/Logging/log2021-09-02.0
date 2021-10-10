@@ -1,0 +1,3 @@
+2021-09-02 13:04:00,492 [DefaultQuartzScheduler_Worker-7] DEBUG | WebLogger - send emails started at 9/2/2021 1:04:00 PM - Execute
+2021-09-02 13:04:02,249 [DefaultQuartzScheduler_Worker-7] DEBUG | WebLogger - send emails end at 9/2/2021 1:04:02 PM - Execute
+2021-09-02 14:52:04,807 [6] INFO  | WebLogger - Global.asax - Application_End Application Shutdown 

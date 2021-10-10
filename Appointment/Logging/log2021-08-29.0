@@ -1,0 +1,162 @@
+2021-08-29 10:50:22,452 [10] DEBUG | WebLogger - 15
+2021-08-29 10:50:22,505 [10] DEBUG | WebLogger - 14
+2021-08-29 10:50:41,060 [98] DEBUG | WebLogger - test
+2021-08-29 11:00:06,950 [83] ERROR | WebLogger - Exception Caught: 
+System.ArgumentException: The relative virtual path '~img/Happy-Anniversary.png' is not allowed here.
+   at System.Web.VirtualPath.Create(String virtualPath, VirtualPathOptions options)
+   at System.Web.VirtualPathUtility.ToAbsolute(String virtualPath, String applicationPath)
+   at System.Web.WebPages.UrlUtil.GenerateClientUrlInternal(HttpContextBase httpContext, String contentPath)
+   at System.Web.WebPages.UrlUtil.GenerateClientUrl(HttpContextBase httpContext, String contentPath)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute2[T0,T1,TRet](CallSite site, T0 arg0, T1 arg1)
+   at ASP._Page_Views_Settings_Index_cshtml.Execute() in C:\Work\AppointmentTaningFaLL\Appointment\Appointment\Views\Settings\Index.cshtml:line 100
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   at System.Web.WebPages.StartPage.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__5(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-08-29 11:01:51,549 [83] ERROR | WebLogger - Exception Caught: 
+System.Web.HttpParseException (0x80004005): Encountered end tag "div" with no matching start tag.  Are your start/end tags properly balanced?
+
+   at System.Web.WebPages.Razor.RazorBuildProvider.EnsureGeneratedCode()
+   at System.Web.WebPages.Razor.RazorBuildProvider.get_CodeCompilerType()
+   at System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   at System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.GetCompiledType(VirtualPath virtualPath)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__5(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-08-29 12:10:34,469 [98] INFO  | WebLogger - Global.asax - Application_End Application Shutdown 
+2021-08-29 12:10:39,159 [37] DEBUG | WebLogger - 15
+2021-08-29 12:10:39,192 [37] DEBUG | WebLogger - 14
+2021-08-29 12:13:55,873 [74] DEBUG | WebLogger - test
+2021-08-29 12:14:32,509 [74] DEBUG | WebLogger - test
+2021-08-29 12:45:42,809 [34] INFO  | WebLogger - Global.asax - Application_End Application Shutdown 
+2021-08-29 12:46:04,920 [37] DEBUG | WebLogger - 15
+2021-08-29 12:46:04,954 [37] DEBUG | WebLogger - 14
+2021-08-29 12:56:44,619 [70] INFO  | WebLogger - Global.asax - Application_End Application Shutdown 
+2021-08-29 12:57:10,804 [37] DEBUG | WebLogger - 15
+2021-08-29 12:57:10,853 [37] DEBUG | WebLogger - 14
+2021-08-29 12:57:25,123 [92] DEBUG | WebLogger - test
+2021-08-29 13:02:38,574 [115] ERROR | WebLogger - Exception Caught: 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Kendo.Mvc.Infrastructure.Implementation.FilterNodeVisitor.Visit(PropertyNode propertyNode)
+   at Kendo.Mvc.Infrastructure.FilterDescriptorFactory.Create(String input)
+   at Kendo.Mvc.UI.DataSourceRequestModelBinder.BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   at Kendo.Mvc.UI.Grid`1.ProcessDataSource()
+   at Kendo.Mvc.UI.Grid`1.WriteHtml(HtmlTextWriter writer)
+   at Kendo.Mvc.UI.WidgetBase.ToHtmlString()
+   at Kendo.Mvc.UI.Fluent.WidgetBuilderBase`2.ToHtmlString()
+   at System.Web.WebPages.WebPageBase.Write(Object value)
+   at ASP._Page_Views_Reminder_Index_cshtml.Execute() in C:\Work\AppointmentTaningFaLL\Appointment\Appointment\Views\Reminder\Index.cshtml:line 14
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   at System.Web.WebPages.StartPage.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__5(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-08-29 13:42:50,205 [70] INFO  | WebLogger - Global.asax - Application_End Application Shutdown 
+2021-08-29 13:43:10,921 [37] DEBUG | WebLogger - 15
+2021-08-29 13:43:10,962 [37] DEBUG | WebLogger - 14
+2021-08-29 13:53:28,949 [6] ERROR | WebLogger - Exception Caught: 
+System.Web.HttpCompileException (0x80004005): C:\Work\AppointmentTaningFaLL\Appointment\Appointment\Views\Reminder\Index.cshtml(51): error CS1061: 'GridFilterableSettingsBuilder' does not contain a definition for 'Multi' and no extension method 'Multi' accepting a first argument of type 'GridFilterableSettingsBuilder' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.GetCompiledType(VirtualPath virtualPath)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__5(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-08-29 15:16:34,287 [115] DEBUG | WebLogger - test
+2021-08-29 15:17:02,852 [6] DEBUG | WebLogger - test
+2021-08-29 15:17:48,580 [96] DEBUG | WebLogger - test
+2021-08-29 15:19:11,220 [70] DEBUG | WebLogger - test
+2021-08-29 15:19:55,388 [90] DEBUG | WebLogger - test
+2021-08-29 15:23:06,094 [70] DEBUG | WebLogger - test
+2021-08-29 15:23:45,026 [93] INFO  | WebLogger - Global.asax - Application_End Application Shutdown 
+2021-08-29 15:24:10,476 [5] DEBUG | WebLogger - 15
+2021-08-29 15:24:10,514 [5] DEBUG | WebLogger - 25
+2021-08-29 15:24:10,516 [5] DEBUG | WebLogger - got to 
+2021-08-29 15:24:24,612 [61] DEBUG | WebLogger - test
+2021-08-29 15:25:00,471 [DefaultQuartzScheduler_Worker-1] DEBUG | WebLogger - send emails started at 8/29/2021 3:25:00 PM - Execute
+2021-08-29 15:25:19,593 [DefaultQuartzScheduler_Worker-1] DEBUG | WebLogger - send emails end at 8/29/2021 3:25:19 PM - Execute
+2021-08-29 15:26:34,565 [113] INFO  | WebLogger - Global.asax - Application_End Application Shutdown 
+2021-08-29 15:26:58,866 [5] DEBUG | WebLogger - 15
+2021-08-29 15:26:58,890 [5] DEBUG | WebLogger - 28
+2021-08-29 15:26:58,892 [5] DEBUG | WebLogger - got to 
+2021-08-29 15:27:11,661 [115] DEBUG | WebLogger - test
+2021-08-29 15:28:00,735 [DefaultQuartzScheduler_Worker-1] DEBUG | WebLogger - send emails started at 8/29/2021 3:28:00 PM - Execute
+2021-08-29 15:31:01,303 [DefaultQuartzScheduler_Worker-1] DEBUG | WebLogger - send emails end at 8/29/2021 3:31:01 PM - Execute
+2021-08-29 16:34:03,511 [122] INFO  | WebLogger - Global.asax - Application_End Application Shutdown 
+2021-08-29 16:34:24,059 [37] DEBUG | WebLogger - 15
+2021-08-29 16:34:24,097 [37] DEBUG | WebLogger - 28
+2021-08-29 16:34:24,099 [37] DEBUG | WebLogger - got to 
+2021-08-29 16:34:35,457 [122] DEBUG | WebLogger - test

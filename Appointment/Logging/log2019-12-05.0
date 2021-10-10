@@ -1,0 +1,73 @@
+2019-12-05 09:02:34,724 [1] DEBUG | WebLogger - 13
+2019-12-05 09:02:34,765 [1] DEBUG | WebLogger - 35
+2019-12-05 09:02:34,854 [1] DEBUG | WebLogger - got to 
+2019-12-05 09:02:36,045 [10] DEBUG | WebLogger - test
+2019-12-05 09:03:35,913 [24] DEBUG | WebLogger - test
+2019-12-05 09:08:16,802 [10] DEBUG | WebLogger - test
+2019-12-05 09:23:16,231 [85] DEBUG | WebLogger - test
+2019-12-05 09:28:10,416 [75] DEBUG | WebLogger - test
+2019-12-05 09:29:52,105 [63] DEBUG | WebLogger - test
+2019-12-05 09:34:32,143 [48] DEBUG | WebLogger - test
+2019-12-05 09:38:35,598 [51] DEBUG | WebLogger - test
+2019-12-05 09:39:37,239 [60] DEBUG | WebLogger - test
+2019-12-05 09:39:54,479 [67] DEBUG | WebLogger - test
+2019-12-05 09:40:39,630 [74] DEBUG | WebLogger - test
+2019-12-05 09:41:50,103 [51] DEBUG | WebLogger - test
+2019-12-05 09:41:56,110 [73] DEBUG | WebLogger - test
+2019-12-05 09:42:22,983 [73] DEBUG | WebLogger - test
+2019-12-05 09:42:27,561 [74] DEBUG | WebLogger - test
+2019-12-05 09:43:49,670 [73] DEBUG | WebLogger - test
+2019-12-05 09:45:05,351 [46] DEBUG | WebLogger - test
+2019-12-05 09:45:13,265 [46] DEBUG | WebLogger - test
+2019-12-05 10:42:17,137 [1] DEBUG | WebLogger - 13
+2019-12-05 10:42:17,176 [1] DEBUG | WebLogger - 35
+2019-12-05 10:42:17,194 [1] DEBUG | WebLogger - got to 
+2019-12-05 10:42:18,021 [11] DEBUG | WebLogger - test
+2019-12-05 10:42:21,044 [10] DEBUG | WebLogger - test
+2019-12-05 10:58:20,624 [78] DEBUG | WebLogger - test
+2019-12-05 11:07:40,980 [100] DEBUG | WebLogger - test
+2019-12-05 12:19:08,467 [1] DEBUG | WebLogger - 13
+2019-12-05 12:19:08,506 [1] DEBUG | WebLogger - 35
+2019-12-05 12:19:08,527 [1] DEBUG | WebLogger - got to 
+2019-12-05 12:19:09,462 [11] DEBUG | WebLogger - test
+2019-12-05 12:27:23,452 [36] DEBUG | WebLogger - test
+2019-12-05 12:36:40,579 [71] DEBUG | WebLogger - test
+2019-12-05 12:42:27,018 [56] ERROR | WebLogger - Exception Caught: 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Kendo.Mvc.Infrastructure.Implementation.FilterNodeVisitor.Visit(PropertyNode propertyNode)
+   at Kendo.Mvc.Infrastructure.FilterDescriptorFactory.Create(String input)
+   at Kendo.Mvc.UI.DataSourceRequestModelBinder.BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   at Kendo.Mvc.UI.Grid`1.ProcessDataSource()
+   at Kendo.Mvc.UI.Grid`1.WriteHtml(HtmlTextWriter writer)
+   at Kendo.Mvc.UI.WidgetBase.ToHtmlString()
+   at Kendo.Mvc.UI.Fluent.WidgetBuilderBase`2.ToHtmlString()
+   at System.Web.WebPages.WebPageBase.Write(Object value)
+   at ASP._Page_Views_Reminder_Index_cshtml.Execute() in E:\WorkSpaceAndRealeses\Traninng\Appointment\Appointment\Views\Reminder\Index.cshtml:line 16
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   at System.Web.WebPages.StartPage.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__5(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2019-12-05 12:42:41,269 [42] DEBUG | WebLogger - test
+2019-12-05 13:07:33,670 [145] DEBUG | WebLogger - test
+2019-12-05 13:09:18,759 [150] DEBUG | WebLogger - test
+2019-12-05 13:09:40,318 [143] DEBUG | WebLogger - test
+2019-12-05 13:18:19,580 [116] DEBUG | WebLogger - test
+2019-12-05 13:35:00,702 [DefaultQuartzScheduler_Worker-2] DEBUG | WebLogger - send emails started at 12/5/2019 1:35:00 PM - Execute
+2019-12-05 13:35:01,068 [DefaultQuartzScheduler_Worker-2] DEBUG | WebLogger - send emails end at 12/5/2019 1:35:01 PM - Execute

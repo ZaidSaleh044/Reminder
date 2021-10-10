@@ -1,0 +1,66 @@
+
+table, .table {
+    thead {
+        background-color: #fff;
+        color: #777;
+
+        th {
+            padding-top: .7rem;
+            padding-bottom: .7rem;
+            background-color: rgba(205,152,44,.1);
+            font-size: 0.7rem !important;
+            font-weight: normal;
+            border: 0;
+        }
+
+        th:first-of-type {
+            border-radius: 0 0 0 0;
+        }
+
+        th:last-of-type {
+            border-radius: 0 0 0 0;
+        }
+    }
+
+    th, td {
+        font-size: .8rem;
+        vertical-align: middle;
+        padding: .9rem .75rem;
+    }
+
+    button {
+        font-size: .75rem;
+        width: 90px;
+        height: 35px;
+        line-height: 17px;
+        margin: 0;
+    }
+}
+.table-hover tbody tr:hover{
+  background-color:rgba(205,152,44,.1);
+}
+
+.max-calculation-table{
+  th, td{
+    font-size: .8rem;
+    vertical-align: middle;
+    padding: .5rem .75rem;
+  }
+
+  tr td:last-of-type{
+    text-align: right;;
+  }
+
+  h6{
+    margin-bottom: 0;
+  }
+}
+
+.btn-square.btn-icon {
+    width: 25px;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    color: #fff;
+}

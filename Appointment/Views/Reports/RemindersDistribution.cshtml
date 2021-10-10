@@ -1,0 +1,79 @@
+﻿@model Appointment.ViewModel.Models.ReportsViewModel
+@using Kendo.Mvc.UI;
+
+@{
+    ViewBag.Title = "Reminders Distribution";
+}
+
+<h2>Reminders Distribution</h2>
+
+<hr />
+<div>
+    @using (Html.BeginForm("RemindersDistribution", "Reports", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+       
+        <div class="form-horizontal">
+
+
+
+            <div class="form-group">
+                @Html.Label("Type", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-4">
+
+                    @Html.DropDownListFor(model => model.SelectedType, (IEnumerable<SelectListItem>)ViewBag.Type, "Select Type", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.SelectedType, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                @Html.Label("Year", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-4">
+                    <input name="year" id="yearpicker" data-role="datepicker" data-start="decade" data-depth="decade" type="number" data-format="yyyy" class="form-control"/>
+                    @Html.HiddenFor(model => model.year, new { @class = "form-control",@id = "year" })
+                    @Html.ValidationMessageFor(model => model.year, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+        <br />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Run report" class="btn btn-primary" />
+            </div>
+        </div>
+    }
+</div>
+
+@*<script src="https://kendo.cdn.telerik.com/2019.2.619/js/jquery.min.js"></script>
+<script src="https://kendo.cdn.telerik.com/2019.2.619/js/jszip.min.js"></script>
+<script src="https://kendo.cdn.telerik.com/2019.2.619/js/kendo.all.min.js"></script>
+<script src="https://kendo.cdn.telerik.com/2019.2.619/js/kendo.aspnetmvc.min.js"></script>*@
+
+<script>
+    $(document).ready(function () {
+        $("#yearpicker").kendoDatePicker({
+            start: "decade",
+            depth: "decade",
+            format: "yyyy",
+            footer: false
+        });
+
+        var start = $("#yearpicker").kendoDatePicker({
+            format: "yyyy",
+            start: "decade",
+            depth: "decade",
+        }).data("kendoDatePicker");
+    });
+
+
+</script>
+

@@ -1,0 +1,107 @@
+﻿@model IEnumerable<Appointment.ViewModel.Models.EmployeesViewModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h2>Employees List</h2>
+    <br />
+    <div class="row">
+        <div class="col-md-12">
+            @(Html.Kendo().Grid(Model)
+              .Name("Grid")
+
+              .Columns(columns =>
+              {
+
+                  columns.Bound(p => p.Name).Width(200).Filterable(ftb => ftb.Cell(cell => cell.Operator("contains").SuggestionOperator(FilterType.Contains).Delay(600000)));
+                  //columns.Bound(p => p.BirthDate).Width(100).Filterable(x=>x.UI("orderDateFilter")).Format("{0:dd/MM/yyyy}");
+                  columns.Bound(p => p.Email).Width(200);
+
+
+                  columns.Command(command =>
+                  {
+                      //command.Custom("Delete").Action("Delete", "Employees").HtmlAttributes(new { id = "btnDeleteItem", title = "Delete", style = "width:30px;", value = "Delete" });
+                      command.Custom("Delete").Action("Delete", "Employees").HtmlAttributes(new { id = "btnDeleteItem", title = "Delete", value = "Delete" });
+                  }).Width(250);
+              })
+              .ToolBar(toolbar => toolbar.Custom()
+                .Text("Get new Employees")
+                .Action("GetnewEmployeesFromActiveDirectory", "Employees"))
+              .Editable(editable => editable.Enabled(false).Mode(GridEditMode.InCell))
+              .Pageable(pageable => pageable
+                       .Refresh(true)
+                       .PageSizes(true)
+                       .ButtonCount(5))
+              .Sortable()
+              .Scrollable()
+              .Filterable(filterable => filterable.Messages(m => m.IsFalse("Inactive"))
+              .Messages(m => m.IsTrue("Acitve")))
+              .HtmlAttributes(new { style = "height:400px;" })
+              .DataSource(dataSource => dataSource
+                  .Server()
+                  .PageSize(20)
+                  .Model(model => model.Id(p => p.ID))
+                  .Read("Index", "Employees")
+                  .Filter(f => f.Add(a => a.IsActive).IsEqualTo(true))
+              )
+            )
+        </div>
+
+    </div>
+</div>
+<style>
+    .k-grid .k-state-selected {
+        background: #1cacff;
+        color: #000000;
+    }
+
+    .k-grid tr.k-state-selected:hover {
+        background-color: #c5f1ff;
+    }
+</style>
+
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("form.k-edit-form").kendoValidator();
+
+        $(document).on('click', '#btnDeleteItem', function (e) {
+            e.preventDefault();
+
+            // show popup
+            bootbox.confirm({
+                title: "Delete Item",
+                message: '<div>' + "You are about to delete this reminder with the employee data, To proceed press Continue" + '</div>',
+                buttons: {
+                    'confirm': {
+                        label: "Continue"
+                    },
+                    'cancel': {
+                        label: "Cancel"
+                    }
+                },
+                callback: function (result) {
+                    if (result) {
+                         window.location.href = e.currentTarget.pathname;
+                        return;
+                    }
+                    else {
+                        return;
+                    }
+                }
+            });
+        })
+
+    });
+
+    function orderDateFilter(element) {
+        debugger;
+        element.kendoDatePicker({
+            format: "dd/MM/yyyy" // set custom defined format
+        });
+    }
+</script>

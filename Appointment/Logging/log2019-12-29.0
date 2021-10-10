@@ -1,0 +1,159 @@
+2019-12-29 09:49:24,514 [1] DEBUG | WebLogger - 13
+2019-12-29 09:49:25,201 [1] DEBUG | WebLogger - 35
+2019-12-29 09:49:25,483 [1] DEBUG | WebLogger - got to 
+2019-12-29 09:51:53,983 [12] DEBUG | WebLogger - test
+2019-12-29 09:52:14,084 [10] DEBUG | WebLogger - test
+2019-12-29 09:55:32,428 [37] DEBUG | WebLogger - test
+2019-12-29 10:00:02,852 [38] DEBUG | WebLogger - test
+2019-12-29 10:00:10,636 [10] DEBUG | WebLogger - test
+2019-12-29 10:33:45,702 [1] DEBUG | WebLogger - 13
+2019-12-29 10:33:45,713 [1] DEBUG | WebLogger - 35
+2019-12-29 10:33:45,718 [1] DEBUG | WebLogger - got to 
+2019-12-29 10:55:39,083 [37] DEBUG | WebLogger - test
+2019-12-29 11:06:12,220 [43] DEBUG | WebLogger - test
+2019-12-29 11:08:03,595 [34] DEBUG | WebLogger - test
+2019-12-29 11:08:47,298 [26] DEBUG | WebLogger - 13
+2019-12-29 11:08:47,482 [26] DEBUG | WebLogger - 35
+2019-12-29 11:08:47,483 [26] DEBUG | WebLogger - got to 
+2019-12-29 11:08:52,274 [33] ERROR | WebLogger - Exception Caught: 
+System.Web.HttpException (0x80004005): A public action method 'Details' was not found on controller 'Appointment.Controllers.CalendarController'.
+   at System.Web.Mvc.Controller.HandleUnknownAction(String actionName)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2019-12-29 11:09:13,147 [33] DEBUG | WebLogger - test
+2019-12-29 11:09:49,762 [33] DEBUG | WebLogger - test
+2019-12-29 11:12:25,891 [21] DEBUG | WebLogger - 13
+2019-12-29 11:12:26,146 [21] DEBUG | WebLogger - 35
+2019-12-29 11:12:26,148 [21] DEBUG | WebLogger - got to 
+2019-12-29 11:12:29,681 [38] DEBUG | WebLogger - test
+2019-12-29 11:15:37,598 [36] DEBUG | WebLogger - test
+2019-12-29 11:26:55,634 [9] DEBUG | WebLogger - test
+2019-12-29 11:27:11,033 [27] DEBUG | WebLogger - test
+2019-12-29 11:27:29,423 [20] DEBUG | WebLogger - test
+2019-12-29 11:40:41,991 [1] DEBUG | WebLogger - 13
+2019-12-29 11:40:42,012 [1] DEBUG | WebLogger - 35
+2019-12-29 11:40:42,017 [1] DEBUG | WebLogger - got to 
+2019-12-29 11:40:42,429 [46] DEBUG | WebLogger - test
+2019-12-29 12:39:18,982 [1] DEBUG | WebLogger - 13
+2019-12-29 12:39:19,088 [1] DEBUG | WebLogger - 35
+2019-12-29 12:39:19,090 [1] DEBUG | WebLogger - got to 
+2019-12-29 12:39:33,549 [5] ERROR | WebLogger - Exception Caught: 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ASP._Page_Views_Settings_Index_cshtml.Execute() in D:\Rminder\AppointmentTaningFaLL\Appointment\Appointment\Views\Settings\Index.cshtml:line 136
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   at System.Web.WebPages.StartPage.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__5(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2019-12-29 12:39:44,796 [6] ERROR | WebLogger - Exception Caught: 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ASP._Page_Views_Settings_Index_cshtml.Execute() in D:\Rminder\AppointmentTaningFaLL\Appointment\Appointment\Views\Settings\Index.cshtml:line 136
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   at System.Web.WebPages.StartPage.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__5(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2019-12-29 12:39:47,145 [5] ERROR | WebLogger - Exception Caught: 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ASP._Page_Views_Settings_Index_cshtml.Execute() in D:\Rminder\AppointmentTaningFaLL\Appointment\Appointment\Views\Settings\Index.cshtml:line 136
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   at System.Web.WebPages.StartPage.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__5(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2019-12-29 12:46:46,006 [1] DEBUG | WebLogger - 13
+2019-12-29 12:46:46,029 [1] DEBUG | WebLogger - 35
+2019-12-29 12:46:46,033 [1] DEBUG | WebLogger - got to 
+2019-12-29 12:46:46,382 [35] DEBUG | WebLogger - test
+2019-12-29 13:25:47,011 [1] DEBUG | WebLogger - 13
+2019-12-29 13:25:47,280 [1] DEBUG | WebLogger - 35
+2019-12-29 13:25:47,284 [1] DEBUG | WebLogger - got to 
+2019-12-29 13:25:48,379 [7] DEBUG | WebLogger - test
+2019-12-29 13:35:00,358 [DefaultQuartzScheduler_Worker-1] DEBUG | WebLogger - send emails started at 29-Dec-19 1:35:00 PM - Execute
+2019-12-29 13:35:00,630 [DefaultQuartzScheduler_Worker-1] ERROR | WebLogger - Exception Caught: 
+System.NotSupportedException: The entity or complex type 'RemindersModel.Reminder' cannot be constructed in a LINQ to Entities query.
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.CheckInitializerType(Type type)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MemberInitTranslator.TypedTranslate(ExpressionConverter parent, MemberInitExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SelectTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Convert()
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Appointment.Business.Job.MailSender.Execute(IJobExecutionContext context) in D:\Rminder\AppointmentTaningFaLL\Appointment\Appointment.Business\Job\MailSender.cs:line 48
+2019-12-29 13:40:14,104 [61] DEBUG | WebLogger - test
+2019-12-29 13:40:36,351 [65] DEBUG | WebLogger - test
+2019-12-29 13:47:20,272 [69] DEBUG | WebLogger - test
+2019-12-29 13:50:59,843 [68] DEBUG | WebLogger - test
+2019-12-29 13:51:59,108 [41] DEBUG | WebLogger - test
+2019-12-29 14:43:57,292 [1] DEBUG | WebLogger - 13
+2019-12-29 14:43:57,316 [1] DEBUG | WebLogger - 35
+2019-12-29 14:43:57,321 [1] DEBUG | WebLogger - got to 
